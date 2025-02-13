@@ -10,21 +10,21 @@
 module.exports = {
   siteMetadata: {
     title: `Gatsby Blog`,
-    description: `The Great Gatsby`,
-    author: `Tyler Losee`,
+    description: ``,
+    author: `Mike Hunsicker`,
     siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
     contact: {
-      name: "Tyler Losee",
-      company: "Blogs Inc.",
-      address: "PO Box 1234"
+      name: `Mike Hunsicker`,
+      company: `Blogs Inc.`,
+      address: `PO Box 1234`
     }
   },
   plugins: [
     {
       resolve: `gatsby-source-contentful`,
       options: {
-        spaceId: `8epgk4ayy5ur`,
-        accessToken: `Av3qOqGy-CY0GT9gxJuJng9cvcizjg7-P2WjC2x2Q5s`
+        spaceId: `ze0w921s1icg`,
+        accessToken: `bb1122b25d90173402833d33e7e05ab97574fb04c6935acf6e01283ff7467d77`
       }
     },
     `gatsby-plugin-image`,
