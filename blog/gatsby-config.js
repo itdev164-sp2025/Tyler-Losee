@@ -3,7 +3,9 @@
  *
  * See: https://www.gatsbyjs.com/docs/reference/config-files/gatsby-config/
  */
-
+require('dotenv').config({
+  path: `.env.${process.env.NODE_ENV}`
+})
 /**
  * @type {import('gatsby').GatsbyConfig}
  */
@@ -11,10 +13,10 @@ module.exports = {
   siteMetadata: {
     title: `Gatsby Blog`,
     description: ``,
-    author: `Mike Hunsicker`,
+    author: `Tyler Losee`,
     siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
     contact: {
-      name: `Mike Hunsicker`,
+      name: `Tyler losee`,
       company: `Blogs Inc.`,
       address: `PO Box 1234`
     }
@@ -23,8 +25,8 @@ module.exports = {
     {
       resolve: `gatsby-source-contentful`,
       options: {
-        spaceId: `ze0w921s1icg`,
-        accessToken: `bb1122b25d90173402833d33e7e05ab97574fb04c6935acf6e01283ff7467d77`
+        spaceId: `${process.env.SPACE_ID}`,
+        accessToken: `${process.env.ACCESS_TOKEN}`
       }
     },
     `gatsby-plugin-image`,
@@ -35,6 +37,7 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
+    `gatsby-transformer-remark`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
