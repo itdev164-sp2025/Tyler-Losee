@@ -8,16 +8,20 @@ import * as styles from "../components/index.module.css"
 
 const IndexPage = ({ data }) => (
   <Layout>
-    <Seo title="Home"/>
+    
     <ul className={styles.list}>
-      {
-        data.allContentfulBlogPost.edges.map(edge => (
+      {data.allContentfulBlogPost.edges.map(edge => (
           <li key={edge.node.id}>
             <Link to={edge.node.slug}>{edge.node.title}</Link>
             <div>
+            {edge.node.heroImage && edge.node.heroImage.gatsbyImageData ? (
               <GatsbyImage
                 image={edge.node.heroImage.gatsbyImageData}
-              />
+                alt={edge.node.title}
+                />
+              ) : (
+                <p>No image available</p>
+              )}
             </div>
             <div>
               {edge.node.body.childMarkdownRemark.excerpt}

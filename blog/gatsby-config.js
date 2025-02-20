@@ -3,9 +3,11 @@
  *
  * See: https://www.gatsbyjs.com/docs/reference/config-files/gatsby-config/
  */
-require('dotenv').config({
+
+require(`dotenv`).config({
   path: `.env.${process.env.NODE_ENV}`
 })
+
 /**
  * @type {import('gatsby').GatsbyConfig}
  */
@@ -16,7 +18,7 @@ module.exports = {
     author: `Tyler Losee`,
     siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
     contact: {
-      name: `Tyler losee`,
+      name: `Tyler Losee`,
       company: `Blogs Inc.`,
       address: `PO Box 1234`
     }
