@@ -25,4 +25,12 @@ const Header = ({ siteTitle }) => (
   </StyledHeader>
 )
 
-export default Header
+Header.propTypes = {
+    siteTitle: PropTypes.string
+}
+
+Header.defaultProps = {
+    siteTitle: ""
+}
+
+export { Header }
