@@ -5,7 +5,7 @@ import styled, { ThemeProvider } from "styled-components"
 
 import "./layout.css"
 import { Gray } from "./themes/Gray"
-import {Header} from "./Header"
+import { Header } from "./Header"
 
 const Content = styled.div`
   margin: 0 auto;
