@@ -1,6 +1,7 @@
 import * as React from "react"
 import { Link } from "gatsby"
 import styled from "styled-components"
+import { H1 } from "../Heading"
 
 const StyledHeader = styled.header`
   margin: 0 auto;
@@ -8,6 +9,7 @@ const StyledHeader = styled.header`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  height: 50px;
   background: ${props => props.theme.header.backgroundColor}
 `
 
@@ -20,7 +22,9 @@ const StyledLink = styled(Link)`
 const Header = ({ siteTitle }) => (
   <StyledHeader>
     <StyledLink to="/">
-      {siteTitle}
+      <H1>
+        {siteTitle}
+      </H1>
     </StyledLink>
   </StyledHeader>
 )
