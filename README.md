@@ -1,3 +1,1 @@
-# Tyler-Losee
-
-New Activity
+#
