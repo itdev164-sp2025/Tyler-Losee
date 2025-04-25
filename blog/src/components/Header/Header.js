@@ -1,9 +1,9 @@
 import * as React from "react"
 import PropTypes from "prop-types"
 import { Link } from "gatsby"
-import styled , { ThemeConsumer } from "styled-components"
+import styled, { ThemeConsumer } from "styled-components"
 import { Flex } from 'rebass'
-import { H1 } from '../Heading'
+import { H1 } from "../Heading"
 import { SearchButton } from '../Button'
 import { Section } from '../Section'
 
@@ -18,10 +18,11 @@ const StyledHeader = styled.header`
 `
 
 const StyledLink = styled(Link)`
- text-decoration: none;
- margin: 0 10px
- color: ${({ theme }) => theme.variants.header.primary.color};
+  text-decoration: none;
+  margin: 0 10px;
+  color: ${({ theme }) => theme.variants.header.primary.color};
 `
+
 const Image = styled.img`
   margin: 0;
 `
@@ -37,7 +38,7 @@ const Title = styled(H1)`
 `
 
 const MediaQuery = styled.div`
-  @media (max-width: 600px){
+  @media (max-width: 600px) {
     display: none;
   }
 `
@@ -46,17 +47,17 @@ const Header = ({ siteTitle }) => (
   <StyledHeader>
     <Section flex>
       <Section width={1/12}
-      flex flexDirecion="column" justifyContent="center">
+        flex flexDirection="column" justifyContent="center">
       <ThemeConsumer>
         {theme => <Image src={theme.images.mainHeaderImage} />}
       </ThemeConsumer>
       </Section>
       <Section width={11/12}
-      flex flexDirection="column" justifyContent="center">
+        flex flexDirection="column" justifyContent="center">
         <Nav>
           <Title>
             <StyledLink to="/">
-              {siteTitle}
+              {siteTitle}       
             </StyledLink>
           </Title>
           <MediaQuery>
@@ -66,15 +67,17 @@ const Header = ({ siteTitle }) => (
           </MediaQuery>
           <SearchButton variant='contrast' />
         </Nav>
-      </Section>
+      </Section>    
     </Section>
   </StyledHeader>
 )
 
-
+Header.propTypes = {
+  siteTitle: PropTypes.string
+}
 
 Header.defaultProps = {
-    siteTitle: ""
+  siteTitle: ""
 }
 
 export { Header }
