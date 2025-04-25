@@ -7,7 +7,6 @@ import { H1 } from "../Heading"
 import { SearchButton } from '../Button'
 import { Section } from '../Section'
 
-
 const StyledHeader = styled.header`
   margin: 0 auto;
   padding: var(--space-4) var(--size-gutter);

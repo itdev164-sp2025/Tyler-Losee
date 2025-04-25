@@ -14,8 +14,6 @@ const Content = styled.div`
   padding: var(--size-gutter);
 `
 
-
-
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
